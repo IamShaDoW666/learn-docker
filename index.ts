@@ -1,8 +1,8 @@
-import Express from "express";
+import express from "express";
 import db from "./utils/db";
 import bodyParser from "body-parser";
 
-const app = Express();
+const app = express();
 const PORT = 8080;
 
 app.use(bodyParser.json());
