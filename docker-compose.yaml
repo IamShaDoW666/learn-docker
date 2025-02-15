@@ -19,6 +19,7 @@ services:
       - "8080:8080"
     volumes:
       - .:/app
+      - /app/node_modules
     command: ts-node-dev --respawn --transpile-only index.ts
     environment:
       - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
