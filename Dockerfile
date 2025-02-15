@@ -16,10 +16,6 @@ COPY . .
 
 RUN npm run build
 
-ENV DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"
-
-RUN npx prisma db push
-
 RUN npx prisma generate
 
 RUN ls -la /app
