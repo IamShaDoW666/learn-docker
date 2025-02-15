@@ -20,7 +20,6 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    command: npm run start
     environment:
       - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
       - NODE_ENV=development
