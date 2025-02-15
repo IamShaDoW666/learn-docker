@@ -8,8 +8,6 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN npm install -g ts-node-dev
-
 # Copy the Prisma schema
 COPY prisma ./prisma
 
@@ -28,5 +26,5 @@ EXPOSE 8080
 ENV NODE_ENV=development
 ENV PORT=8080
 
-# CMD [ "npm", "run", "start"]
-CMD ["ts-node-dev", "--respawn", "--transpile-only", "index.ts"]
+CMD [ "npm", "run", "start"]
+# CMD ["ts-node-dev", "--respawn", "--transpile-only", "index.ts"]
